@@ -1,24 +1,20 @@
-"use strict";
-
-const option = {
-  rootMargin: "100px",
-  threshold: 0,
+const options = {
+  rootMargin: "-50px 200px",
+  threshold: 1,
 };
+
 const callback = (entries, observer) => {
   entries.forEach((entry) => {
-    console.log(entry);
-    console.log(observer);
     if (entry.isIntersecting) {
-      entry.target.classList.add("active");
-    } else {
-      entry.target.classList.remove("active");
+      let delay = entry.target.dataset.saDelay ? entry.target.dataset.saDelay : 0;
+      setTimeout(() => {
+        entry.target.classList.add("show");
+      }, delay);
     }
   });
 };
 
-const observer = new IntersectionObserver(callback, option);
+const observer = new IntersectionObserver(callback, options);
 
-const target = document.querySelectorAll(".box");
-target.forEach((item) => {
-  observer.observe(item);
-});
+const saElementList = document.querySelectorAll(".sa");
+saElementList.forEach((element) => observer.observe(element));
