@@ -1,1 +1,61 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.page {
+  position: relative;
+  background-color: lightcoral;
+  height: 100vh;
+}
+
+.page:nth-child(even) {
+  background-color: skyblue;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.box {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: lightyellow;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 8px -3px #a0a0a0;
+          box-shadow: 5px 5px 8px -3px #a0a0a0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.first {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.second {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.third {
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+}
+
+.active {
+  background-color: rebeccapurple;
+}
+/*# sourceMappingURL=style.css.map */
